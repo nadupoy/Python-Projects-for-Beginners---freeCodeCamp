@@ -13,7 +13,7 @@ This repository documents my attempts at building the beginner level Python proj
 I encountered the following error in the terminal when running the code in the VS Code editor:
 
 ```
-activate.ps1 cannot be loaded because running scripts is    disabled ...
+activate.ps1 cannot be loaded because running scripts is disabled ...
 ```
 
 I managed to find a solution [here](https://support.enthought.com/hc/en-us/articles/360058403072-Windows-error-activate-ps1-cannot-be-loaded-because-running-scripts-is-disabled-UnauthorizedAccess-). I opted for  *'Option 1 - Select Command Prompt as the default terminal shell in VS Code'*  as it is a quick and straightforward solution.
@@ -55,7 +55,7 @@ Initially, the clause used in the `while` loop was only:
 
 This resulted in an infinite output of the `print` statement as follows:
 
-```python
+```
     48 59
 
     The numbers are not a match. 😔
