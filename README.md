@@ -6,6 +6,7 @@ This repository documents my attempts at building the beginner level Python proj
     - [madLibs01.py](https://github.com/nadupoy/Python-Projects-for-Beginners---freeCodeCamp/blob/main/madLibs01.py)
     - [madLibs02.py](https://github.com/nadupoy/Python-Projects-for-Beginners---freeCodeCamp/blob/main/madLibs02.py)
 - [Guess the Number Game - computer](#guess-the-number-game---computer)
+- [Guess the Number Game - user](#guess-the-number-game---user)
 
 ### Mad Libs:
 ---
@@ -35,9 +36,7 @@ In this project, I applied the [choice( )](https://www.w3schools.com/python/modu
 
 ```python
     noun_subjects = ["i", "you", "he", "she", "it", "they"]`
-
     ...
-
     noun_subject = random.choice(noun_subjects)
 ```
 
@@ -49,7 +48,6 @@ Initially, the clause used in the `while` loop was only:
 
 ```python
     print(number_01, number_02)
-
     print("The numbers are not a match. 😔\n")
 ```
 
@@ -79,10 +77,20 @@ This was solved by adding the following statements in the clause:
 
 ```python
     number_01 = random.randint(1, 100)
-
     number_02 = random.randint(1, 100)
 ```
 
 **N/B:** Increasing the range in the `randint()` method made for a longer and more interesting program.
 
 Moreover, I learnt about [fenced code blocks](https://www.markdownguide.org/extended-syntax/#fenced-code-blocks) and [syntax highlighting](https://www.markdownguide.org/extended-syntax/#syntax-highlighting) in Markdown's [extended syntax](https://www.markdownguide.org/extended-syntax).
+
+### [Guess the Number Game - user:](https://github.com/nadupoy/Python-Projects-for-Beginners---freeCodeCamp/blob/main/numberGame-user.py)
+---
+In the book [Automate the Boring Stuff](https://automatetheboringstuff.com/2e/chapter1/) by [Al Sweigart](https://inventwithpython.com/), the default value type of the `input()` function is a string.
+
+A string value cannot be accurately compared with an integer value. The `int()` function is therefore used to convert the string input value into an integer so as to accurately compare the two values as shown below:
+
+```python
+    number_02 = input("Guess a number between 1 and 5. ")
+    number_02 = int(number_02)
+```
