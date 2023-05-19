@@ -7,6 +7,7 @@ This repository documents my attempts at building the beginner level Python proj
     - [madLibs02.py](https://github.com/nadupoy/Python-Projects-for-Beginners---freeCodeCamp/blob/main/madLibs02.py)
 - [Guess the Number Game - computer](#guess-the-number-game---computer)
 - [Guess the Number Game - user](#guess-the-number-game---user)
+- [Rock, paper, scissors](#rock-paper-scissors)
 
 ### Mad Libs:
 ---
@@ -94,3 +95,29 @@ A string value cannot be accurately compared with an integer value. The `int()` 
     number_02 = input("Guess a number between 1 and 5. ")
     number_02 = int(number_02)
 ```
+
+### [Rock, paper, scissors:](https://github.com/nadupoy/Python-Projects-for-Beginners---freeCodeCamp/blob/main/rock_paper_scissors.py)
+---
+I initially opted to use a `set` sequence for the options available for selection by the computer as it is mainly unchangeable and unordered:
+
+```python
+    options = {"rock", "paper", "scissors"}
+```
+
+This however resulted in the following error:
+
+```
+    TypeError: 'set' object is not subscriptable
+```
+
+In addition to being unordered, sets are also unindexed. This resulted in the built-in `random` module's `choice()` method not being able to make a selection.
+
+Using a `tuple` sequence instead resolved the error as they are unchangeable, ordered and indexed.
+
+```python
+    options = ("rock", "paper", "scissors")
+```
+
+[Borislav Hadzhiev](https://github.com/bobbyhadz) goes into detail about the above error in [this](https://bobbyhadz.com/blog/python-set-object-is-not-subscriptable) blog article.
+
+I also managed to successfully implement nested conditional statements in this project.
